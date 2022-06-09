@@ -32,7 +32,26 @@ function timeChecker() {
 }
 
 // save entered text into localstorage
+$("button").click(function() {
+    var saveId = $(this).parent().attr("id");
+    var saveDesc = $(this).siblings(".description").val();
 
+    localStorage.setItem(saveId, saveDesc);
+
+    alert("Schedule has been saved");
+})
+
+// pull from localstorage
+
+$("#9 .description").text(localStorage.getItem("9"));
+$("#10 .description").text(localStorage.getItem("10"));
+$("#11 .description").text(localStorage.getItem("11"));
+$("#12 .description").text(localStorage.getItem("12"));
+$("#13 .description").text(localStorage.getItem("13"));
+$("#14 .description").text(localStorage.getItem("14"));
+$("#15 .description").text(localStorage.getItem("15"));
+$("#16 .description").text(localStorage.getItem("16"));
+$("#17 .description").text(localStorage.getItem("17"));
 
 // run timechecker function
 timeChecker();
